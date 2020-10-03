@@ -1,0 +1,28 @@
+Authentikacio:
+  ✔ Login + view @done(20-10-03 17:45)
+  ✔ Register + view @done(20-10-03 18:31)
+  ☐ EnsureAuth
+  UserRoleok:
+    ☐ Sima user
+    ☐ Admin user
+Main Page:
+  Menu:
+    ☐ Kosar
+    ☐ Login/register
+  ☐ Pizza lista elem
+  ☐ Pizza Lista
+Kosar Page:
+  ☐ Pizza lista
+  ☐ Lehessen valtoztatni a darabszamit
+  ☐ Lehessen torolni elemet
+Admin Page:
+  Pizzak:
+    ☐ csak admin ferhessen hozza
+    ☐ Pizza hozzaadasa
+    ☐ Pizzak listazasa
+    ☐ Pizza editalasa
+    ☐ Pizza lekerdezese
+  Felhasznalok:
+    ☐ Felhasznalo torlese
+    ☐ Felhasznalo keszitese @low 
+    ☐ Felhasznalok listazasa @low 
