@@ -1,9 +1,10 @@
 const express = require('express');
 
 const router = express.Router();
-const { ensureUser, isAdmin } = require('../middlewares/auth');
+const { ensureUser } = require('../middlewares/auth');
 
 router.get('/', (req, res) => {
+  res.locals.user = req.user;
   res.render('index');
 });
 
@@ -15,8 +16,8 @@ router.get('/register', (req, res, next) => {
   res.render('register');
 });
 
-router.get('/admin', ensureUser, isAdmin, (req, res, next) => {
-  res.send('Admin page');
+router.get('/profile', ensureUser, (req, res, next) => {
+  res.render('profile');
 });
 
 module.exports = router;

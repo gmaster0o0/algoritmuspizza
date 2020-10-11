@@ -1,14 +1,17 @@
 Authentikacio:
   ✔ Login + view @done(20-10-03 17:45)
   ✔ Register + view @done(20-10-03 18:31)
-  ☐ EnsureAuth
+  ✔ EnsureAuth @done(20-10-03 19:06)
+  ✔ logout @done(20-10-11 17:14)
   UserRoleok:
-    ☐ Sima user
-    ☐ Admin user
+    ✔ Sima user @done(20-10-03 19:07)
+    ✔ Admin user @done(20-10-03 19:07)
 Main Page:
   Menu:
     ☐ Kosar
-    ☐ Login/register
+    ✔ logout @done(20-10-11 17:15)
+    ✔ admin @done(20-10-11 17:15)
+    ✔ Login/register @done(20-10-11 17:14)
   ☐ Pizza lista elem
   ☐ Pizza Lista
 Kosar Page:
@@ -23,6 +26,9 @@ Admin Page:
     ☐ Pizza editalasa
     ☐ Pizza lekerdezese
   Felhasznalok:
-    ☐ Felhasznalo torlese
-    ☐ Felhasznalo keszitese @low 
-    ☐ Felhasznalok listazasa @low 
+    ✔ Felhasznalo torlese @done(20-10-11 15:54)
+    ✔ Felhasznalo modositas @low @done(20-10-11 16:22)
+    ✔ Felhasznalok listazasa @low @done(20-10-11 15:54)
+DB beállítás:
+  ✔ Db kapcsolat @done(20-10-11 13:34)
+  ✔ DB config env fileba @done(20-10-11 17:19)

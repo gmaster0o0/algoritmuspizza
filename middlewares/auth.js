@@ -9,7 +9,7 @@ const isAdmin = (req, res, next) => {
   if (req.user.role === 'admin') {
     return next();
   }
-  return new Error('Nem vagy admint teeeeeee');
+  return next(new Error('Nem vagy admint teeeeeee'));
 };
 
 module.exports = {

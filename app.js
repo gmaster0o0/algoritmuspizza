@@ -8,6 +8,7 @@ const flash = require('connect-flash');
 
 const authRoute = require('./routers/auth.router');
 const viewRoute = require('./routers/view.router');
+const adminRouter = require('./routers/admin.router');
 
 const authConfig = require('./authConfig');
 
@@ -34,6 +35,7 @@ app.use(cookieParser());
 
 app.use('/auth', authRoute);
 app.use('/', viewRoute);
+app.use('/admin', adminRouter);
 
 app.all('*', (req, res, next) => {
   res.send('Az oldal nem talalhato');

@@ -1,0 +1,24 @@
+.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true' id=`UserModifyModal-${val.id}`)
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h3#exampleModalLabel.modal-title Felhasználó módosítása
+        button.close(type='button' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        h5 Felhasználó adatai
+        form(action=`/admin/user/modify/${val.id}`, method="POST").mb-4
+          .form-group
+            label(for='email') Új email
+            input.form-control(type='email', aria-describedby='emailHelp', placeholder='Enter email', name='email', value=`${val.email}`)
+          .form-group
+            label(for='role') Szerepkör
+            select.custom-select(name='role')
+                option(selected, value='user') User
+                option(value='admin') Admin
+          button.btn.btn-primary(type='submit') Küldd!
+        hr
+        h5 Új jelszó generálás
+        a.btn.btn-primary(href=`/admin/user/passwordReset/${val.id}`) Generál!
+      .modal-footer
+        button.btn.btn-secondary(type='button' data-dismiss='modal') Mégse

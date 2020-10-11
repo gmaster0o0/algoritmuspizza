@@ -1,21 +1,28 @@
 nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
-  a.navbar-brand 
+  a.navbar-brand(href="/")
     img(src="/images/pizza.png", alt="alt", width="30px" height="30px")
     | Algoritmus Pizzeria
   button.navbar-toggler(data-target='#my-nav', data-toggle='collapse', aria-controls='my-nav', aria-expanded='false', aria-label='Toggle navigation')
     span.navbar-toggler-icon
   #my-nav.collapse.navbar-collapse
     ul.navbar-nav.ml-auto
-      li.nav-item.active
-        a.nav-link(href='/login')
-          | Belépés
-          span.sr-only (current)
-      li.nav-item.active
-        a.nav-link(href='/register')
-          | Regisztráció 
-          span.sr-only (current)
-      li.nav-item.active
-        a.nav-link(href='#')
-          | Admin 
-          span.sr-only (current)
+      if(!user)
+        li.nav-item.active
+          a.nav-link(href='/login')
+            | Belépés
+            span.sr-only (current)
+        li.nav-item.active
+          a.nav-link(href='/register')
+            | Regisztráció 
+            span.sr-only (current)
+      if(user && user.role === 'admin')
+        li.nav-item.active
+          a.nav-link(href='/admin')
+            | Admin 
+            span.sr-only (current)
+      if(user)
+          li.nav-item.active
+            a.nav-link(href='/auth/logout')
+              | Kijelentkezés 
+              span.sr-only (current)
       
