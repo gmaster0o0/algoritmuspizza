@@ -1,0 +1,36 @@
+extends ../layout
+
+block content
+    .container.mt-5
+        h1.mb-2 Pizza keszítese
+        form(action=`/admin/pizzas`, method="POST").mb-4
+          .form-group
+            label(for='name') Név
+            input.form-control(type='text', placeholder='Enter a new name', name='name')
+          .form-group
+            label(for='description') Leírás
+            input.form-control(type='text', placeholder='Enter a new description', name='description')
+          .form-group
+            label(for='price') Ár
+            input.form-control(type='number' name='price' value='0')
+          button.btn.btn-primary(type='submit') Küldd!
+        hr
+        h1.my-5 Pizzak
+        ul.list-group
+            each val,index  in pizzaList
+                li.list-group-item
+                    .row
+                        a.col-md-7.col-sm-12(data-toggle='collapse' href=`#pizzaCollapse${index}` role='button' aria-expanded='false' aria-controls=`pizzaCollapse${index}`)
+                          h4  #{val.name}
+                          .collapse(id=`pizzaCollapse${index}`)
+                            p #{val.description}
+                        .col-md-5.col-sm-12.d-flex.justify-content-end
+                            a.btn.btn-primary.mx-2(data-toggle='modal', data-target=`#PizzaModifyModal-${val.id}`)
+                                | Módosítás
+                            include _pizzaModify.modal.pug
+                            a.btn.btn-danger.mx-2(data-toggle='modal' data-target=`#PizzaDeleteModal-${val.id}`)
+                                | Törlés
+                            include _pizzaDelete.modal.pug
+        if !pizzaList || pizzaList.length === 0
+          p Jelenleg meg nincs pizza a listába
+              

@@ -7,7 +7,7 @@
           span(aria-hidden='true') ×
       .modal-body
         h5 Felhasználó adatai
-        form(action=`/admin/user/modify/${val.id}`, method="POST").mb-4
+        form(action=`/admin/users/modify/${val.id}`, method="POST").mb-4
           .form-group
             label(for='email') Új email
             input.form-control(type='email', aria-describedby='emailHelp', placeholder='Enter email', name='email', value=`${val.email}`)

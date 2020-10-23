@@ -1,0 +1,22 @@
+.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true' id=`PizzaModifyModal-${val.id}`)
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h3#exampleModalLabel.modal-title Felhasználó módosítása
+        button.close(type='button' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        h5 Felhasználó adatai
+        form(action=`/admin/pizzas/modify/${val.id}`, method="POST").mb-4
+          .form-group
+            label(for='name') Név
+            input.form-control(type='text', placeholder='Enter a new name', name='name', value=`${val.name}`)
+          .form-group
+            label(for='description') Leírás
+            input.form-control(type='text', placeholder='Enter a new description', name='description', value=`${val.description}`)
+          .form-group
+            label(for='price') Ár
+            input.form-control(type='number' name='price' value=`${val.price}`)
+          button.btn.btn-primary(type='submit') Küldd!
+      .modal-footer
+        button.btn.btn-secondary(type='button' data-dismiss='modal') Mégse

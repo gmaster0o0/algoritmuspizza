@@ -26,13 +26,13 @@ const registerStrategy = new LocalStrategy(
 
       if (user) return done(new Error('User is already registered!'), false);
 
-      const hashedPassword = hashPassword(password);
+      const hashedPassword = await hashPassword(password);
 
       const rUser = await User.create({ email, password: hashedPassword });
 
       return done(null, rUser);
     } catch (error) {
-      return done(new Error('Valami nagy baj tortent, jajjjj'));
+      return done(error);
     }
   }
 );

@@ -1,0 +1,12 @@
+.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true' id=`PizzaDeleteModal-${val.id}`)
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5#exampleModalLabel.modal-title Biztosan törölni akarod?
+        button.close(type='button' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        p Biztosan törölni akarod a(z) #{val.id} pizzat?
+      .modal-footer
+        button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+        a.btn.btn-danger(href=`/admin/pizzas/delete/${val.id}`) Törlés!

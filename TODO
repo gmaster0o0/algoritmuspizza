@@ -20,11 +20,11 @@ Kosar Page:
   ☐ Lehessen torolni elemet
 Admin Page:
   Pizzak:
-    ☐ csak admin ferhessen hozza
-    ☐ Pizza hozzaadasa
-    ☐ Pizzak listazasa
-    ☐ Pizza editalasa
-    ☐ Pizza lekerdezese
+    ✔ csak admin ferhessen hozza @done(20-10-23 17:03)
+    ✔ Pizza hozzaadasa @done(20-10-23 17:03)
+    ✔ Pizzak listazasa @done(20-10-23 17:03)
+    ✔ Pizza editalasa @done(20-10-23 17:03)
+    ✔ Pizza lekerdezese @done(20-10-23 17:03)
   Felhasznalok:
     ✔ Felhasznalo torlese @done(20-10-11 15:54)
     ✔ Felhasznalo modositas @low @done(20-10-11 16:22)
